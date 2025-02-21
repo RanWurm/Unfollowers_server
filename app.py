@@ -4,6 +4,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+
+@app.route('/')
+def home():
+    return 'Hello, World!'
+    
 def extract_hrefs(json_data) -> set:
     """
     Extract all hrefs from the JSON data structure.
